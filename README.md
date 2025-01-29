@@ -17,7 +17,7 @@ bun install
 ## Build
 
 ```bash
-bun build
+bun binary
 ```
 
 This generates a binary named `shiki-cli` in the current directory.
