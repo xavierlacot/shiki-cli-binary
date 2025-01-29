@@ -1,0 +1,20 @@
+{
+  "name": "shiki-cli-binary",
+  "description": "Build the shiki highlighter as a command line binary using bun",
+  "module": "index.ts",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@shikijs/langs": "^2.1.0",
+    "minimist": "^1.2.8",
+    "shiki": "^2.1.0"
+  },
+  "scripts": {
+    "binary": "bun build --compile --minify --sourcemap --bytecode index.ts --outfile shiki-cli"
+  }
+}
