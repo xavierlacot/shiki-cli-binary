@@ -1,20 +1,25 @@
 {
-  "name": "shiki-cli-binary",
-  "description": "Build the shiki highlighter as a command line binary using bun",
-  "module": "index.ts",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "@shikijs/langs": "^2.1.0",
-    "minimist": "^1.2.8",
-    "shiki": "^2.1.0"
-  },
-  "scripts": {
-    "binary": "bun build --compile --minify --sourcemap --bytecode index.ts --outfile shiki-cli"
-  }
+	"name": "shiki-cli-binary",
+	"description": "Build the shiki highlighter as a command line binary using bun",
+	"module": "index.ts",
+	"license": "MIT",
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"dependencies": {
+		"@shikijs/langs": "^2.1.0",
+		"minimist": "^1.2.8",
+		"shiki": "^2.1.0"
+	},
+	"scripts": {
+		"binary": "bun build --compile --minify --sourcemap --bytecode index.ts --outfile shiki-cli",
+		"check": "bunx biome check",
+		"format": "bunx biome format --write ./index.ts",
+		"lint": "bunx biome lint --write ./index.ts"
+	},
+	"trustedDependencies": ["@biomejs/biome"]
 }

@@ -10,7 +10,6 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v4
 
-
       - name: Install bun
         uses: oven-sh/setup-bun@v2
 
